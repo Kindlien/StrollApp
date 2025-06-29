@@ -30,9 +30,30 @@
 		8FED5AA12E118A2D0058FDAC /* Stroll DEV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stroll DEV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		8FED5B272E1194B00058FDAC /* Exceptions for "Stroll" folder in "Stroll" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Resources/Config/Stroll-DEV-Info.plist",
+			);
+			target = 8FE3E06C2E11478900772388 /* Stroll */;
+		};
+		8FED5B282E1194B00058FDAC /* Exceptions for "Stroll" folder in "Stroll DEV" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Resources/Config/Stroll-DEV-Info.plist",
+			);
+			target = 8FED5AA02E118A2D0058FDAC /* Stroll DEV */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		8FE3E06F2E11478900772388 /* Stroll */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				8FED5B272E1194B00058FDAC /* Exceptions for "Stroll" folder in "Stroll" target */,
+				8FED5B282E1194B00058FDAC /* Exceptions for "Stroll" folder in "Stroll DEV" target */,
+			);
 			path = Stroll;
 			sourceTree = "<group>";
 		};
@@ -448,6 +469,7 @@
 				DEVELOPMENT_TEAM = VL4T2DFCRG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Stroll/Resources/Config/Stroll-PROD-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Stroll;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need to access the microphone to record voice messages/answers";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -482,6 +504,7 @@
 				DEVELOPMENT_TEAM = VL4T2DFCRG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Stroll/Resources/Config/Stroll-PROD-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Stroll;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need to access the microphone to record voice messages/answers";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -588,6 +611,7 @@
 				DEVELOPMENT_TEAM = VL4T2DFCRG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Stroll/Resources/Config/Stroll-DEV-Info.plist";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need to access the microphone to record voice messages/answers";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -620,6 +644,7 @@
 				DEVELOPMENT_TEAM = VL4T2DFCRG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Stroll/Resources/Config/Stroll-DEV-Info.plist";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need to access the microphone to record voice messages/answers";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
