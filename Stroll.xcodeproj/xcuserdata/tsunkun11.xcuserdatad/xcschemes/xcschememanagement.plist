@@ -4,10 +4,38 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Stroll DEV.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>Stroll.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>8FE3E06C2E11478900772388</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8FE3E07E2E11478D00772388</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8FE3E0882E11478D00772388</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8FE3E0A32E1184BE00772388</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
