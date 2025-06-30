@@ -8,8 +8,8 @@
 import Foundation
 
 enum AppEnvironment {
-    case development
     case production
+    case development
 
     static var current: AppEnvironment {
         #if PRODUCTION
@@ -21,8 +21,8 @@ enum AppEnvironment {
 
     var baseURL: String {
         switch self {
-        case .development: return "https://dev.api.stroll.com"
         case .production: return "https://api.stroll.com"
+        case .development: return "https://dev.api.stroll.com"
         }
     }
 }
