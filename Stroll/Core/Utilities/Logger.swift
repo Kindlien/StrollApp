@@ -10,7 +10,7 @@ import Foundation
 
 struct Logger {
     static func log(_ message: String, level: LogLevel = .info, file: String = #file, function: String = #function, line: Int = #line) {
-        #if DEBUG
+        #if DEVELOPMENT
         let fileName = (file as NSString).lastPathComponent
         os_log("%{public}@: %{public}@", log: OSLog.default, type: level.osLogType, "\(fileName):\(line)", message)
         #endif

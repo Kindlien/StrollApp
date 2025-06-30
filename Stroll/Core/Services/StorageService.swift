@@ -43,4 +43,16 @@ class StorageService {
         guard let data = data else { return nil }
         return try? JSONDecoder().decode(T.self, from: data)
     }
+
+    func delete(forKey key: String, storage: StorageType = .userDefaults) {
+        switch storage {
+        case .userDefaults:
+            UserDefaults.standard.removeObject(forKey: key)
+        case .fileSystem:
+            let url = FileManager.default
+                .urls(for: .documentDirectory, in: .userDomainMask)[0]
+                .appendingPathComponent(key)
+            try? FileManager.default.removeItem(at: url)
+        }
+    }
 }
