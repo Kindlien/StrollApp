@@ -44,14 +44,27 @@ extension View {
         maxHeight: CGFloat? = nil,
         designWidth: CGFloat = 375
     ) -> some View {
-        self.frame(
-            width: width?.scaled(from: designWidth),
-            height: height?.scaled(from: designWidth),
-            minWidth: minWidth?.scaled(from: designWidth),
-            maxWidth: maxWidth?.scaled(from: designWidth),
-            minHeight: minHeight?.scaled(from: designWidth),
-            maxHeight: maxHeight?.scaled(from: designWidth)
-        )
+        var view = AnyView(self)
+
+        if let minWidth = minWidth?.scaled(from: designWidth),
+           let idealWidth = width?.scaled(from: designWidth),
+           let maxWidth = maxWidth?.scaled(from: designWidth) {
+            view = AnyView(view.frame(minWidth: minWidth, idealWidth: idealWidth, maxWidth: maxWidth))
+        } else if let width = width?.scaled(from: designWidth),
+                  let height = height?.scaled(from: designWidth) {
+            view = AnyView(view.frame(width: width, height: height))
+        } else if let width = width?.scaled(from: designWidth) {
+            view = AnyView(view.frame(width: width))
+        } else if let height = height?.scaled(from: designWidth) {
+            view = AnyView(view.frame(height: height))
+        }
+
+        if let minHeight = minHeight?.scaled(from: designWidth),
+           let maxHeight = maxHeight?.scaled(from: designWidth) {
+            view = AnyView(view.frame(minHeight: minHeight, maxHeight: maxHeight))
+        }
+
+        return view
     }
 
     // MARK: - Padding Scaling
